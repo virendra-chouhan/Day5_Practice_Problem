@@ -4,29 +4,25 @@ namespace Day5_Practice_Problem
 {
     class Program
     {
-        static bool isPowerOfTwo(int n)
-        {
-            if (n == 0)
-                return false;
-
-            while (n != 1)
-            {
-                if (n % 2 != 0)
-                    return false;
-
-                n = n / 2;
-            }
-            return true;
-        }
+       
         static void Main(string[] args)
         {
-           
 
-            // Driver program
-            
-                Console.WriteLine(isPowerOfTwo(31) ? "Yes" : "No");
-                Console.WriteLine(isPowerOfTwo(64) ? "Yes" : "No");
-            
+
+            int i;
+            Console.WriteLine("Enter a Number");
+            i = int.Parse(Console.ReadLine());
+            if (i % 2 == 0)
+            {
+                Console.WriteLine("Entered Number is an even number");
+                Console.Read();
+
+            }
+            else
+            {
+                Console.Write("Entered Nuumber is an odd number");
+                Console.Read();
+            }
         }
 
     }
