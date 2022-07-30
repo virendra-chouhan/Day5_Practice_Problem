@@ -6,41 +6,32 @@ namespace Day5_Practice_Problem
     {
         static void Main(string[] args)
         {
-            int Head = 1;
-            int Tail = 0;
-            int headcount = 0;
-            int tailcount = 0;
-            int num = int.Parse(Console.ReadLine());
-            for (int i = 1; i < num; i++)
+            int chk_year;
+            Console.Write("\n\n");
+            Console.Write("Check whether a given year is leap year or not:\n");
+            Console.Write("----------------------------------------------");
+            Console.Write("\n\n");
+            Console.Write("Input an year : ");
+            chk_year = Convert.ToInt32(Console.ReadLine());
+
+            if ((chk_year % 400) == 0)
             {
-
-
-                Console.WriteLine("Flip Coin");
-                
-                Random random = new Random();
-                int flip = random.Next(0, 2);
-                Console.WriteLine(flip);
-
-                if (flip == Head)
-                {
-                    headcount++;
-                }
-                else
-                {
-                    tailcount++;
-                }
-
-                
+                Console.WriteLine("{0} is a leap year.\n", chk_year);
             }
-            int Head_Percentage = (headcount * 100) / num;
-            int Tail_Percentage = (tailcount * 100) / num;
-            Console.WriteLine("Head_Percentage" + Head_Percentage);
-            Console.WriteLine("Tail_Percentage" + Tail_Percentage);
-            Console.WriteLine("how much time Head came" + headcount);
-            Console.WriteLine("how much time Tail came" + tailcount);
+            else if ((chk_year % 100) == 0)
+            {
+                Console.WriteLine("{0} is not a leap year.\n", chk_year);
+            }
+            else if ((chk_year % 4) == 0)
+            {
+                Console.WriteLine("{0} is a leap year.\n", chk_year);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a leap year.\n", chk_year);
+            }
+
+
         }
-
-
-
     }
 }
