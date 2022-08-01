@@ -8,20 +8,17 @@ namespace Day5_Practice_Problem
         static void Main(string[] args)
         {
 
+            Console.WriteLine("Enter the Alphabet: ");
+            char c;
+            c = Console.ReadKey().KeyChar;
 
-            int i;
-            Console.WriteLine("Enter a Number");
-            i = int.Parse(Console.ReadLine());
-            if (i % 2 == 0)
+            if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')
             {
-                Console.WriteLine("Entered Number is an even number");
-                Console.Read();
-
+                Console.WriteLine("Entered Char is Vowel");
             }
             else
             {
-                Console.Write("Entered Nuumber is an odd number");
-                Console.Read();
+                Console.WriteLine("Entered Char is a Consonant");
             }
         }
 
