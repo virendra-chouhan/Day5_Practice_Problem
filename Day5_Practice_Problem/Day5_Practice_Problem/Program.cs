@@ -8,18 +8,14 @@ namespace Day5_Practice_Problem
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter the Alphabet: ");
-            char c;
-            c = Console.ReadKey().KeyChar;
-
-            if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')
-            {
-                Console.WriteLine("Entered Char is Vowel");
-            }
-            else
-            {
-                Console.WriteLine("Entered Char is a Consonant");
-            }
+            Console.WriteLine("Enter the First number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine($"First No.= {a} and Second No.= {b} ");
         }
 
     }
